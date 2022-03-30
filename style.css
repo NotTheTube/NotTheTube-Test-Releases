@@ -1,0 +1,327 @@
+@font-face
+{
+    font-family: ytbold; 
+    src: url("/Fonts/youtube-sans-bold.ttf");
+}
+@font-face
+{
+    font-family: ytmedium; 
+    src: url("/Fonts/youtube-sans-medium.ttf");
+}
+@font-face
+{
+    font-family: ytmed; 
+    src: url("/Fonts/youtube-sans-medium.ttf");
+}
+@font-face
+{
+    font-family: ytlight; 
+    src: url("/Fonts/youtube-sans-light.ttf");
+}
+@font-face
+{
+    font-family: deftext; 
+    src: url("/Fonts/Lato-Regular.ttf");
+}
+@font-face
+{
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://fonts.gstatic.com/s/roboto/v29/KFOkCnqEu92Fr1Mu51xFIzIFKw.woff2) format('woff2');
+	unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+#profile
+{
+	float: right;
+}
+#recommendedvideo
+{
+	line-height: 0px;
+}
+.videodetails
+{
+	display: inline-table;
+	height: 0px;
+	margin-bottom: -450px;
+	line-height: 6px;
+}
+#thumbnail-inline
+{
+	display: inline-flex;
+}
+.thumbnail-image
+{
+	width: 240px;
+	height: 135px;
+	border-radius: 10px;
+}
+.thumbnail-image:hover
+{
+	width: 250px;
+	height: 140.63px;
+	border-radius: 10px;
+    cursor: pointer;
+}
+#newuserid
+{
+	width: 100px;
+}
+#newuserid, #usertext
+{
+	display: inline-flex;
+}
+#videodetails
+{
+	line-height: 1px;
+}
+.ytbold
+{
+    font-family: ytbold;
+}
+.ytmed
+{
+    font-family: ytmed;
+}
+.ytmedium
+{
+    font-family: ytmedium;
+}
+.ytlight
+{
+    font-family: ytlight;
+}
+.deftext
+{
+    font-family: deftext;
+}
+.defaulttext
+{
+    font-family: deftext;
+}
+#logoimage
+{
+    width: 55px;
+    height: 55px;
+}
+#icontext
+{
+	line-height: 1px;
+    font-family: ytbold;
+    margin-top: 25px;
+}
+#logoimage, #icontext
+{
+    cursor: pointer;
+}
+#search
+{
+    width: 250px;
+    height: 30px;
+    position: absolute;
+    top: 16px;
+    left: 42.5%;
+}
+#searchrequest
+{
+    position: absolute;
+    top: 16px;
+    left: 60.7%;
+    height: 30px;
+    width: 30px;
+}
+#searchimage
+{
+    height: 15px;
+    width: 15px;
+}
+#profile
+{
+    margin-left: 500;
+    height: 30px;
+    margin-top: 14px;
+}
+#topbar
+{
+    display: inline-flex;
+    border: 1px solid;
+    border-radius: 10px;
+    width: 100%;
+}
+#usernamediv, #passworddiv
+{
+    display: inline-flex;
+}
+#username, #password
+{
+    height: 25px;
+    margin-top: 17.5px;
+}
+#note
+{
+    color: red;
+}
+#passworddetect1, #passworddetect2, #passworddetect3, #passworddetect4
+{
+    height: 25px;
+    width: 35px;
+}
+#passworddetect1
+{
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+#passworddetect2, #passworddetect3
+{
+    border-radius: 0px;
+}
+#passworddetect4
+{
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+#likevideo:hover
+{
+	color: green;
+	cursor: pointer;
+}
+#dislikevideo:hover
+{
+	color: red;
+	cursor: pointer;
+}
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+ @import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
+ *, *:after, *:before {
+	 box-sizing: border-box;
+}
+ body {
+	 width: 100%;
+	 height: 100%;
+	 padding: 0;
+	 margin: 0;
+	 font-size: 16px;
+	 overflow: hidden;
+}
+ .message {
+	 background: #eee;
+	 box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.31);
+	 border-radius: 1em;
+	 overflow: hidden;
+	 display: flex;
+	 flex-wrap: wrap;
+	 max-width: 40em;
+	 margin: 2em auto;
+}
+ .message header {
+	 background: #9e9e9e;
+	 width: 100%;
+	 padding: 0.5em;
+}
+ .message i:after {
+	 font-family: "Font Awesome 5 Free";
+	 font-weight: 900;
+	 content: '\f128';
+	 font-style: normal;
+	 color: #eee;
+	 background: #353535;
+	 padding: 1em 0.75em;
+	 font-size: 1.25em;
+	 display: block;
+	 width: 2.5em;
+	 height: 100%;
+	 text-align: center;
+}
+ .message h2 {
+	 margin: 0.75em;
+	 font-size: 1.25em;
+	 position: relative;
+	 display: block;
+	 width: calc(100% - 2.5em - 1.5em);
+}
+ .message h2 span {
+	 color: #9e9e9e;
+}
+ .message h2:after {
+	 content: '';
+	 border-bottom: 0.1em solid #9e9e9e;
+	 width: 100%;
+	 height: 100%;
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+}
+ .error header {
+	 background: #d50000;
+	 font-family: "Roboto";
+}
+.error i:after {
+	background: #3d1d1d;
+	color: #ff5656;
+    content: "";
+    margin-left: -4px;
+    margin-bottom: 5px;
+    font-size: 21.6px;
+}
+ .error h2 span {
+	 color: #d50000;
+}
+ .error h2:after {
+	 border-bottom: 0.1em solid #d50000;
+	 font-family: "Roboto";
+}
+ .warning header {
+	 background: #ff6f00;
+}
+ .warning i:after {
+	background: #432e1d;
+	color: #ffb780;
+	content: "❗";
+   margin-left: -5px;
+   font-size: 21.6px;
+}
+ .warning h2 span {
+	 color: #ff6f00;
+}
+ .warning h2:after {
+	 border-bottom: 0.1em solid #ff6f00;
+}
+ .neutral header {
+	 background: #448aff;
+}
+ .neutral i:after {
+	 background: #273243;
+	 color: #c4daff;
+	 content: "ℹ️";
+   font-size: 20px;
+}
+ .neutral h2 span {
+	 color: #448aff;
+}
+ .neutral h2:after {
+	 border-bottom: 0.1em solid #448aff;
+}
+ .success header {
+	 background: #388e3c;
+}
+ .success i:after {
+	 background: #253226;
+	 color: #7bcb7e;
+	 content: "✅";
+   margin-left: -5px;
+   margin-bottom: 2px;
+   font-size: 21.6px;
+}
+ .success h2 span {
+	 color: #388e3c;
+}
+ .success h2:after {
+	 border-bottom: 0.1em solid #388e3c;
+}
+ .uhm header {
+	 background: #c1610d;
+}

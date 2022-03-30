@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Loading...</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src='https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js'></script>
+        <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+        <link rel="shortcut icon" href="../shortcut icon.png">
+    </head>
+    <body>
+        <div id="topbar">
+           <img src="../../icon.png" id="logoimage" onclick="main()">
+            <h2 id="icontext" onclick="main()">NotTheTube</h2>
+            <select id="profile" style="float: right;"oninput="checkdropdown(this)">
+                <option id="displayuser">Not signed in.</option>
+                <option>View Profile</option>
+                <option>Options</option>
+                <option>View Profile</option>
+                <option>NotTheTube Studio</option>
+            </select>
+        </div>
+        <br>
+        <div id="main">
+            <h1 class="ytbold">Selected videos for the day:</h1>
+            <div id="recommendedvideo">
+                <div id="thumbnail-inline">
+                    &nbsp;&nbsp;&nbsp;<img src="https://nttuploader.github.io/1/1.png" class="thumbnail-image" onclick="recommendvid1()">
+                </div>
+                <div class="videodetails">
+                    &nbsp;<h3 class="ytlight">bon</h3><h3 class="ytlight" id="recommendedvideo1">0 views</h3><!--<h3 class="ytlight" id="recommendedvideo1ratio">0%</h3>--><h4 style="color: grey;" class="ytlight">kirk7715</h4>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="main.js"></script>
+</html>
