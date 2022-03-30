@@ -1,12 +1,12 @@
 @font-face
 {
     font-family: ytbold; 
-    src: url("/Fonts/youtube-sans-bold.ttf");
+    src: url("/NotTheTube/Fonts/youtube-sans-bold.ttf");
 }
 @font-face
 {
     font-family: ytmedium; 
-    src: url("/Fonts/youtube-sans-medium.ttf");
+    src: url("/NotTheTube/Fonts/youtube-sans-medium.ttf");
 }
 @font-face
 {
@@ -16,12 +16,12 @@
 @font-face
 {
     font-family: ytlight; 
-    src: url("/Fonts/youtube-sans-light.ttf");
+    src: url("/NotTheTube/Fonts/youtube-sans-light.ttf");
 }
 @font-face
 {
     font-family: deftext; 
-    src: url("/Fonts/Lato-Regular.ttf");
+    src: url("/NotTheTube/Fonts/Lato-Regular.ttf");
 }
 @font-face
 {
