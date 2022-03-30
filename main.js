@@ -13,10 +13,10 @@ if(window.location.pathname == "/NotTheTube-Test-Releases//new/account/signup.ht
 const firebaseConfig =
 {
     apiKey: "AIzaSyDrsvEIH9PmP_y9b7cnpoShVKqa6tyF4tM",
-    authDomain: "NotTheTube-Test-Releases-1e911.firebaseapp.com",
-    databaseURL: "https://NotTheTube-Test-Releases-1e911-default-rtdb.firebaseio.com",
-    projectId: "NotTheTube-Test-Releases-1e911",
-    storageBucket: "NotTheTube-Test-Releases-1e911.appspot.com",
+    authDomain: "notthetube-1e911.firebaseapp.com",
+    databaseURL: "https://notthetube-1e911-default-rtdb.firebaseio.com",
+    projectId: "notthetube-1e911",
+    storageBucket: "notthetube-1e911.appspot.com",
     messagingSenderId: "306903903976",
     appId: "1:306903903976:web:57d77c2fa6186d289ce35d",
     measurementId: "G-B2DTE3Q38H"
