@@ -6,7 +6,7 @@ var green
 var data3
 var data = null
 var userid = localStorage.getItem("userid")
-if(window.location.pathname == "/new/account/signup.htm")
+if(window.location.pathname == "/NotTheTube//new/account/signup.htm")
 {
     document.getElementById("body").innerHTML = "<html><head><title>Sign Up - NotTheTube</title><script src='https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js'></script><script src='https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js'></script><link rel='stylesheet' href='../../style.css' type='text/css'><link rel='shortcut icon' href='../../shortcut icon.png'></head><body><noscript><div id='messagetype'><section class='message error noscript'><header></header><h2><span>Error!</span>An error occurred when logging into your newly made account. This usually means that the database has broke mid-login or there is a problem with your internet. Try again later or try and login again. </h2></section></div></noscript><div id='topbar'><img src='../../icon.png' id='logoimage' onclick='main()'><h2 id='icontext' onclick='main()'>NotTheTube</h2><input type='text' id='search' placeholder='Search...'><button id='searchrequest'><img src='../../search.png' id='searchimage'></button><select id='profile'><option value='user'>Not signed in.</option><option value='options'>Options</option><option value='viewprofile'>View Profile</option><option value='tostudio'>NotTheTube Studio</option></select></div><br><div id='main'><center><h1 class='ytmed'>Welcome to NotTheTube!</h1><div id='usernamediv'><h3 class='deftext'>Username:&nbsp;&nbsp;</h3><input id='username' oninput='check()'></div><h3 id='note' class='ytlight'>(note: you cannot verify yourself if you have the same username as another person that is also verified.)</h3><br><div id='passworddiv'><h3 class='deftext'>Password:&nbsp;&nbsp;</h3><input id='password' oninput='check()'></div><br><button id='passworddetect1'></button><button id='passworddetect2'></button><button id='passworddetect3'></button><button id='passworddetect4'></button><br><br><button id='signup' onclick='senddata()' disabled='true'>Sign Up</button></center></div><script type='text/javascript' src='../../main.js'></script></body></html>"
 }
@@ -34,23 +34,23 @@ function checkdropdown(selected)
     {
        if(selected.options[selected.selectedIndex - 1].value == "Not signed in.")
        {
-           window.location = "/new/account/login.htm"
+           window.location = "/NotTheTube/new/account/login.htm"
        }
        else
        {
-           window.location = "/profile/" + localStorage.getItem("userid") + ".htm"
+           window.location = "/NotTheTube/profile/" + localStorage.getItem("userid") + ".htm"
        }
     }
 }
 if(localStorage.getItem("userid") == "" || localStorage.getItem("userid") == null || localStorage.getItem("username") == "" || localStorage.getItem("username") == null || localStorage.getItem("password") == "" || localStorage.getItem("password") == null || localStorage.getItem("accountstatus") == "" || localStorage.getItem("accountstatus") == null && localStorage.getItem("request") == null || localStorage.getItem("request") == "")
 {
-    if(window.location.pathname == "/new/acount/login.htm")
+    if(window.location.pathname == "/NotTheTube/new/acount/login.htm")
     {
         document.getElementById("main").innerHTML = "<div id='messagetype'><section class='message error'><header></header><h2 style='font-family: 'Roboto';'><span>Critical Attention!</span> Stored account information may be corrupted, deleted or tampered with which is not allowed. Your account may be looked at if this problem keeps continuing. If this is a glitch that keeps happening let me know on my discord account kirk#7715. You can log back in <a href='./new/account/login/htm'>here</a> or you can <a href='./new/account/signup.htm'>sign up</a></h2></section></div>"
     }
 
 }
-if(window.location.pathname == "/upload.htm")
+if(window.location.pathname == "/NotTheTube/upload.htm")
 {
     console.log("0")
     if(logindataconfirm1 == false || logindataconfirm2 == false || logindataconfirm3 == false)
@@ -79,7 +79,7 @@ function senddatalogin()
     }
     else
     {
-        window.location = "/index.htm"
+        window.location = "/NotTheTube/index.htm"
     }
 }
 function setnewuserid()
@@ -90,7 +90,7 @@ function setnewuserid()
 }
 function autologin()
 {
-    if(localStorage.getItem("request") == "login-signupdata" && window.location.pathname == "/new/account/login.htm")
+    if(localStorage.getItem("request") == "login-signupdata" && window.location.pathname == "/NotTheTube/new/account/login.htm")
     {
         document.getElementById("main").innerHTML = "<center><h1 class='ytmed'>Logging you in...</h1></center>"
         if(logindataconfirm1 == false || logindataconfirm2 == false || logindataconfirm3 == false)
@@ -101,10 +101,10 @@ function autologin()
         else
         {
             localStorage.setItem("request", "alreadyloggedin")
-            window.location = "/index.htm"
+            window.location = "/NotTheTube/index.htm"
         }
     }
-    if(localStorage.getItem("request") == "login-logback" && window.location.pathname == "/new/account/login.htm")
+    if(localStorage.getItem("request") == "login-logback" && window.location.pathname == "/NotTheTube/new/account/login.htm")
     {
         if(logindataconfirm1 == false || logindataconfirm2 == false || logindataconfirm3 == false)
         {
@@ -152,7 +152,7 @@ var input
 sizechange()
 function main()
 {
-    window.location = "../../index.htm"
+    window.location = "../../NotTheTube/index.htm"
 }
 function sizechange()
 {
@@ -171,7 +171,7 @@ if(window.location.pathname.includes('watch'))
     if(localStorage.getItem(window.location.pathname) == "" || localStorage.getItem(window.location.pathname) == null)
     {
         localStorage.setItem(window.location.pathname, true)
-        if(window.location.pathname == "/watch/1.htm")
+        if(window.location.pathname == "/NotTheTube/watch/1.htm")
         {
             firebaseRef = firebase.database().ref("watch/1/views")
             firebaseRef.once("value", function(snapshot) {
@@ -264,9 +264,9 @@ function checkinfo()
         }
         if(logindataconfirm1 == false || logindataconfirm2 == false || logindataconfirm3 == false)
         {
-            if(window.location.pathname != "/new/account/login.htm")
+            if(window.location.pathname != "/NotTheTube/new/account/login.htm")
             {
-                window.location = "/new/account/login.htm"
+                window.location = "/NotTheTube/new/account/login.htm"
             }
             document.getElementById("displayuser").innerText = "Err: Account Info Edit"
             document.getElementById("main").innerHTML = "<div id='messagetype'><section class='message warning'><header></header><h2 style='font-family: 'Roboto';'><span>Attention!</span> Account information has changed since last visit, therefore you have been automatically logged out.</h2></section></div><center><h1 class='ytmed'>Welcome back!</h1><h3 class='ytlight'>(if you don't have an account yet head to <a href='/new/account/signup.htm'>the signup page</a>)</h3><div id='usernamediv'><h3 class='deftext'>Username:&nbsp;&nbsp;</h3><input id='username' oninput='check()'></div><br><div id='passworddiv'><h3 class='deftext'>Password:&nbsp;&nbsp;</h3><input id='password'></div><br><br><button id='signup' onclick='senddatalogin()'>Log In</button></center>"
@@ -380,5 +380,5 @@ var firebaseRef = firebase.database().ref("watch/1")
     })
 function recommendvid1()
 {
-    window.location = "/watch/1.htm"
+    window.location = "/NotTheTube/watch/1.htm"
 }
