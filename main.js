@@ -376,6 +376,10 @@ var firebaseRef = firebase.database().ref("watch/1")
         document.getElementById("recommendedvideo1ratio").innerText = data2 + "%"
         document.getElementById("recommendedvideo1ratio").style.color = "rgb(" + red + ", " + green + ", 0)"
     })
+function recommendvid1
+{
+    window.location = "/watch/1.htm"
+}
 function likevideo()
 {
     if(localStorage.getItem(window.location.pathname + "lod") == "dislike" || localStorage.getItem(window.location.pathname + "lod") == "" || localStorage.getItem(window.location.pathname + "lod") == null)
