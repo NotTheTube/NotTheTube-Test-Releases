@@ -6,10 +6,6 @@ var green
 var data3
 var data = null
 var userid = localStorage.getItem("userid")
-if(window.location.pathname == "/NotTheTube-Test-Releases//new/account/signup.htm")
-{
-    document.getElementById("body").innerHTML = "<html><head><title>Sign Up - NotTheTube-Test-Releases</title><script src='https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js'></script><script src='https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js'></script><link rel='stylesheet' href='../../style.css' type='text/css'><link rel='shortcut icon' href='../../shortcut icon.png'></head><body><noscript><div id='messagetype'><section class='message error noscript'><header></header><h2><span>Error!</span>An error occurred when logging into your newly made account. This usually means that the database has broke mid-login or there is a problem with your internet. Try again later or try and login again. </h2></section></div></noscript><div id='topbar'><img src='../../icon.png' id='logoimage' onclick='main()'><h2 id='icontext' onclick='main()'>NotTheTube-Test-Releases</h2><input type='text' id='search' placeholder='Search...'><button id='searchrequest'><img src='../../search.png' id='searchimage'></button><select id='profile'><option value='user'>Not signed in.</option><option value='options'>Options</option><option value='viewprofile'>View Profile</option><option value='tostudio'>NotTheTube-Test-Releases Studio</option></select></div><br><div id='main'><center><h1 class='ytmed'>Welcome to NotTheTube-Test-Releases!</h1><div id='usernamediv'><h3 class='deftext'>Username:&nbsp;&nbsp;</h3><input id='username' oninput='check()'></div><h3 id='note' class='ytlight'>(note: you cannot verify yourself if you have the same username as another person that is also verified.)</h3><br><div id='passworddiv'><h3 class='deftext'>Password:&nbsp;&nbsp;</h3><input id='password' oninput='check()'></div><br><button id='passworddetect1'></button><button id='passworddetect2'></button><button id='passworddetect3'></button><button id='passworddetect4'></button><br><br><button id='signup' onclick='senddata()' disabled='true'>Sign Up</button></center></div><script type='text/javascript' src='../../main.js'></script></body></html>"
-}
 const firebaseConfig =
 {
     apiKey: "AIzaSyDrsvEIH9PmP_y9b7cnpoShVKqa6tyF4tM",
@@ -294,8 +290,10 @@ var firebaseRef = firebase.database().ref("watch/1")
         data2 = Math.round(data2 * 100)
         console.log(data2)
         console.log(data3)
-        if(document.getElementById("view"))
+        if(document.getElementById("likevideo"))
         {
+        document.getElementById("likevideo").innerText = "Like (" + snapshot.val().likes + ")"
+        document.getElementById("dislikevideo").innerText = "Dislike (" + snapshot.val().dislikes + ")"
         if(data == 1)
         {
             document.getElementById("view").innerText = "1 view"
@@ -334,51 +332,124 @@ var firebaseRef = firebase.database().ref("watch/1")
                 document.getElementById("view").innerText = data.toString().charAt(0) + data.toString().charAt(1) + data.toString().charAt(2) + "M views"
             }
         }
-        // document.getElementById("recommendedvideo1ratio").innerText = data2 + "%"
-        // document.getElementById("recommendedvideo1ratio").style.color = "rgb(" + red + ", " + green + ", 0)"
+        document.getElementById("recommendedvideo1ratio").innerText = data2 + "%"
+        document.getElementById("recommendedvideo1ratio").style.color = "rgb(" + red + ", " + green + ", 0)"
         }
         if(data == 1)
         {
-            document.getElementById("recommendedvideo1").innerText = "1 view"
+            document.getElementById("view").innerText = "1 view"
         }
         else if(data < 1000)
         {
-            document.getElementById("recommendedvideo1").innerText = data + " views"
+            document.getElementById("view").innerText = data + " views"
         }
         else if(data > 999 && 1000000 > data)
         {
             if(data.toString().length == 4)
             {
-                document.getElementById("recommendedvideo1").innerText = data.toString().charAt(0) + "." + data.toString().charAt(1) + "K views"
+                document.getElementById("view").innerText = data.toString().charAt(0) + "." + data.toString().charAt(1) + "K views"
             }
             else if(data.toString().length == 5)
             {
-                document.getElementById("recommendedvideo1").innerText = data.toString().charAt(0) + data.toString().charAt(1) + "." + data.toString().charAt(2) + "K views"
+                document.getElementById("view").innerText = data.toString().charAt(0) + data.toString().charAt(1) + "." + data.toString().charAt(2) + "K views"
             }
             else if(data.toString().length == 6)
             {
-                document.getElementById("recommendedvideo1").innerText = data.toString().charAt(0) + data.toString().charAt(1) + data.toString().charAt(2) + "K views"
+                document.getElementById("view").innerText = data.toString().charAt(0) + data.toString().charAt(1) + data.toString().charAt(2) + "K views"
             }
         }
         else if(data > 999999)
         {
             if(data.toString().length == 7)
             {
-                document.getElementById("recommendedvideo1").innerText = data.toString().charAt(0) + "." + data.toString().charAt(1) + "M views"
+                document.getElementById("view").innerText = data.toString().charAt(0) + "." + data.toString().charAt(1) + "M views"
             }
             else if(data.toString().length == 8)
             {
-                document.getElementById("recommendedvideo1").innerText = data.toString().charAt(0) + data.toString().charAt(1) + "." + data.toString().charAt(2) + "M views"
+                document.getElementById("view").innerText = data.toString().charAt(0) + data.toString().charAt(1) + "." + data.toString().charAt(2) + "M views"
             }
             else if(data.toString().length == 9)
             {
-                document.getElementById("recommendedvideo1").innerText = data.toString().charAt(0) + data.toString().charAt(1) + data.toString().charAt(2) + "M views"
+                document.getElementById("view").innerText = data.toString().charAt(0) + data.toString().charAt(1) + data.toString().charAt(2) + "M views"
             }
         }
-        // document.getElementById("recommendedvideo1ratio").innerText = data2 + "%"
-        // document.getElementById("recommendedvideo1ratio").style.color = "rgb(" + red + ", " + green + ", 0)"
+        document.getElementById("recommendedvideo1ratio").innerText = data2 + "%"
+        document.getElementById("recommendedvideo1ratio").style.color = "rgb(" + red + ", " + green + ", 0)"
     })
-function recommendvid1()
+function likevideo()
 {
-    window.location = "/NotTheTube-Test-Releases/watch/1.htm"
+    if(localStorage.getItem(window.location.pathname + "lod") == "dislike" || localStorage.getItem(window.location.pathname + "lod") == "" || localStorage.getItem(window.location.pathname + "lod") == null)
+    {
+        var firebaseRef = firebase.database().ref("watch/1")
+        firebaseRef.once("value", function(snapshot) {
+            if(localStorage.getItem(window.location.pathname + "lod") == "" || localStorage.getItem(window.location.pathname + "lod") == null)
+            {
+                var data2 = Math.round(snapshot.val().likes + 1)
+                localStorage.setItem(window.location.pathname + "lod", "like")
+            }
+            else
+            {
+                var data2 = Math.round(snapshot.val().likes + 1)
+                var data = Math.round(snapshot.val().dislikes - 1)
+                localStorage.setItem(window.location.pathname + "lod", "like")
+            }
+            var data = Math.round(snapshot.val().dislikes - 1)
+            var data2 = Math.round(snapshot.val().likes + 1)
+            var data3 = snapshot.val().views
+            console.log(data)
+            console.log(data2)
+            console.log()
+            console.log()
+            database.ref("watch/1").set
+            ({
+                likes: data2,
+                dislikes: data,
+                views: data3
+            })
+        })
+    }
+}
+function dislikevideo()
+{
+    if(localStorage.getItem(window.location.pathname + "lod") == "like" || localStorage.getItem(window.location.pathname + "lod") == "" || localStorage.getItem(window.location.pathname + "lod") == null)
+    {
+        localStorage.setItem(window.location.pathname + "lod", "dislike")
+        var firebaseRef = firebase.database().ref("watch/1")
+        firebaseRef.once("value", function(snapshot) {
+            var data = Math.round(snapshot.val().dislikes + 1)
+            var data2 = Math.round(snapshot.val().likes - 1)
+            var data3 = snapshot.val().views
+            console.log(data)
+            console.log(data2)
+            console.log()
+            console.log()
+            database.ref("watch/1").set
+            ({
+                likes: data2,
+                dislikes: data,
+                views: data3
+            })
+        })
+    }
+}
+loadlikeordislike()
+function loadlikeordislike()
+{
+    console.log("Ran")
+    if(localStorage.getItem(window.location.pathname + "lod") == null || localStorage.getItem(window.location.pathname + "lod") != "" && document.getElementById("likevideo"))
+    {
+        if(localStorage.getItem(window.location.pathname + "lod") == "like")
+        {
+            document.getElementById("likevideo").style.color = "green"
+            document.getElementById("dislikevideo").style.color = ""
+        }
+        else if(localStorage.getItem(window.location.pathname + "lod") == "dislike")
+        {
+            document.getElementById("dislikevideo").style.color = "red"
+            document.getElementById("likevideo").style.color = ""
+        }
+    }
+    setTimeout(() => {
+        loadlikeordislike()
+    }, 500);       
 }
