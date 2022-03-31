@@ -378,7 +378,7 @@ var firebaseRef = firebase.database().ref("watch/1")
     })
 function recommendvid1()
 {
-    window.location = "/NotTheTube-Test-Releases/watch/1.htm"
+    window.location = "../NotTheTube-Test-Releases/watch/1.htm"
 }
 function likevideo()
 {
