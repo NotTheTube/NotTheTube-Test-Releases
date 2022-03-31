@@ -376,7 +376,7 @@ var firebaseRef = firebase.database().ref("watch/1")
         document.getElementById("recommendedvideo1ratio").innerText = data2 + "%"
         document.getElementById("recommendedvideo1ratio").style.color = "rgb(" + red + ", " + green + ", 0)"
     })
-function recommendvid1
+function recommendvid1()
 {
     window.location = "/watch/1.htm"
 }
