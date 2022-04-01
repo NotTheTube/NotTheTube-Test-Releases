@@ -30,23 +30,23 @@ function checkdropdown(selected)
     {
        if(selected.options[selected.selectedIndex - 1].value == "Not signed in.")
        {
-           window.location = "/NotTheTube-Test-Releases/new/account/login.htm"
+           window.location = "/NotTheTube/new/account/login.htm"
        }
        else
        {
-           window.location = "/NotTheTube-Test-Releases/profile/" + localStorage.getItem("userid") + ".htm"
+           window.location = "/NotTheTube/profile/" + localStorage.getItem("userid") + ".htm"
        }
     }
 }
 if(localStorage.getItem("userid") == "" || localStorage.getItem("userid") == null || localStorage.getItem("username") == "" || localStorage.getItem("username") == null || localStorage.getItem("password") == "" || localStorage.getItem("password") == null || localStorage.getItem("accountstatus") == "" || localStorage.getItem("accountstatus") == null && localStorage.getItem("request") == null || localStorage.getItem("request") == "")
 {
-    if(window.location.pathname == "/NotTheTube-Test-Releases/new/acount/login.htm")
+    if(window.location.pathname == "/NotTheTube/new/acount/login.htm")
     {
         document.getElementById("main").innerHTML = "<div id='messagetype'><section class='message error'><header></header><h2 style='font-family: 'Roboto';'><span>Critical Attention!</span> Stored account information may be corrupted, deleted or tampered with which is not allowed. Your account may be looked at if this problem keeps continuing. If this is a glitch that keeps happening let me know on my discord account kirk#7715. You can log back in <a href='./new/account/login/htm'>here</a> or you can <a href='./new/account/signup.htm'>sign up</a></h2></section></div>"
     }
 
 }
-if(window.location.pathname == "/NotTheTube-Test-Releases/upload.htm")
+if(window.location.pathname == "/NotTheTube/upload.htm")
 {
     console.log("0")
     if(logindataconfirm1 == false || logindataconfirm2 == false || logindataconfirm3 == false)
@@ -75,7 +75,7 @@ function senddatalogin()
     }
     else
     {
-        window.location = "/NotTheTube-Test-Releases/index.htm"
+        window.location = "/NotTheTube/index.htm"
     }
 }
 function setnewuserid()
@@ -86,7 +86,7 @@ function setnewuserid()
 }
 function autologin()
 {
-    if(localStorage.getItem("request") == "login-signupdata" && window.location.pathname == "/NotTheTube-Test-Releases/new/account/login.htm")
+    if(localStorage.getItem("request") == "login-signupdata" && window.location.pathname == "/NotTheTube/new/account/login.htm")
     {
         document.getElementById("main").innerHTML = "<center><h1 class='ytmed'>Logging you in...</h1></center>"
         if(logindataconfirm1 == false || logindataconfirm2 == false || logindataconfirm3 == false)
@@ -97,10 +97,10 @@ function autologin()
         else
         {
             localStorage.setItem("request", "alreadyloggedin")
-            window.location = "/NotTheTube-Test-Releases/index.htm"
+            window.location = "/NotTheTube/index.htm"
         }
     }
-    if(localStorage.getItem("request") == "login-logback" && window.location.pathname == "/NotTheTube-Test-Releases/new/account/login.htm")
+    if(localStorage.getItem("request") == "login-logback" && window.location.pathname == "/NotTheTube/new/account/login.htm")
     {
         if(logindataconfirm1 == false || logindataconfirm2 == false || logindataconfirm3 == false)
         {
@@ -148,7 +148,7 @@ var input
 sizechange()
 function main()
 {
-    window.location = "../../NotTheTube-Test-Releases/index.htm"
+    window.location = "../../NotTheTube/index.htm"
 }
 function sizechange()
 {
@@ -167,14 +167,18 @@ if(window.location.pathname.includes('watch'))
     if(localStorage.getItem(window.location.pathname) == "" || localStorage.getItem(window.location.pathname) == null)
     {
         localStorage.setItem(window.location.pathname, true)
-        if(window.location.pathname == "/NotTheTube-Test-Releases/watch/1.htm")
+        if(window.location.pathname == "/NotTheTube/watch/1.htm")
         {
             firebaseRef = firebase.database().ref("watch/1/views")
             firebaseRef.once("value", function(snapshot) {
                 data = Math.round(snapshot.val() + 1)
+                var data2 = Math.round(snapshot.val().dislikes - 1)
+                var data3 = Math.round(snapshot.val().likes + 1)
                 database.ref("watch/1").set
                 ({
-                    views: data
+                    views: data,
+                    likes: data3,
+                    dislikes: data2,
                 })
             })
         }
@@ -260,9 +264,9 @@ function checkinfo()
         }
         if(logindataconfirm1 == false || logindataconfirm2 == false || logindataconfirm3 == false)
         {
-            if(window.location.pathname != "/NotTheTube-Test-Releases/new/account/login.htm")
+            if(window.location.pathname != "/NotTheTube/new/account/login.htm")
             {
-                window.location = "/NotTheTube-Test-Releases/new/account/login.htm"
+                window.location = "/NotTheTube/new/account/login.htm"
             }
             document.getElementById("displayuser").innerText = "Err: Account Info Edit"
             document.getElementById("main").innerHTML = "<div id='messagetype'><section class='message warning'><header></header><h2 style='font-family: 'Roboto';'><span>Attention!</span> Account information has changed since last visit, therefore you have been automatically logged out.</h2></section></div><center><h1 class='ytmed'>Welcome back!</h1><h3 class='ytlight'>(if you don't have an account yet head to <a href='/new/account/signup.htm'>the signup page</a>)</h3><div id='usernamediv'><h3 class='deftext'>Username:&nbsp;&nbsp;</h3><input id='username' oninput='check()'></div><br><div id='passworddiv'><h3 class='deftext'>Password:&nbsp;&nbsp;</h3><input id='password'></div><br><br><button id='signup' onclick='senddatalogin()'>Log In</button></center>"
@@ -378,7 +382,7 @@ var firebaseRef = firebase.database().ref("watch/1")
     })
 function recommendvid1()
 {
-    window.location = "../NotTheTube-Test-Releases/watch/1.htm"
+    window.location = "../NotTheTube/watch/1.htm"
 }
 function likevideo()
 {
