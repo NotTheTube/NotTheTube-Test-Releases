@@ -19,6 +19,9 @@ function checkLogin()
     document.getElementById("body").style.cursor = "progress"
     var userid = document.getElementById("accID").value
     console.log(userid)
+    var user = document.getElementById("username").value
+    var pass = document.getElementById("password").value
+    var userid = document.getElementById("accID").value
     firebase.database().ref("users/" + userid).on("value", function(snapshot)
     {
         if(snapshot.val().username == document.getElementById("username").value)
