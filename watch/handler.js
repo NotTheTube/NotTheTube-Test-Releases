@@ -28,7 +28,7 @@ function videoSize()
 }
 
 // When the website is loaded for more 5 seconds, it will add 1 view to the database.
-if(window.location.pathname == '/watch/1.html')
+if(window.location.pathname == 'NotTheTube-Test-Releases/watch/1.html')
 {
     setTimeout(() => {
         firebase.database().ref("watch/1").update({
@@ -97,7 +97,7 @@ firebase.database().ref("users/" + userid).on("value", function(snapshot)
 videoDetails()
 function videoDetails()
 {
-    if(window.location.pathname == '/watch/1.html')
+    if(window.location.pathname == 'NotTheTube-Test-Releases/watch/1.html')
     {
         const currentTime = new Date();
         const uploadTime = new Date('2023-06-12T03:06:56Z');
@@ -193,7 +193,7 @@ function videoDetails()
 // This will like the current video and update the user's liked videos so they cannot keep liking the same video twice.
 function likeVideo()
 {
-    if(window.location.pathname == '/watch/1.html')
+    if(window.location.pathname == 'NotTheTube-Test-Releases/watch/1.html')
     {
         if(logindataconfirm1 == true && logindataconfirm2 == true && logindataconfirm3 == true)
         {

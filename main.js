@@ -144,5 +144,5 @@ function videoDetails()
 // This will redirect the user to the specified watch page.
 function redirecttoID(id)
 {
-    window.location = "/watch/" + id + ".html"
+    window.location = "watch/" + id + ".html"
 }
