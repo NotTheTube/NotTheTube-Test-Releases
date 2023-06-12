@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home - NotTheTube</title>
+        <link rel="stylesheet" href="/style.css" type="text/css">
+        <script src='https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js'></script>
+        <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+        <link rel="shortcut icon" href="/shortcut icon.png">
+    </head>
+    <body>
+        <!--This is the bar at the top, should be present at all times-->
+        <div id="topbar">
+            <image id="logo" src="/icon.png"></image>
+            <br>
+            <h1 class="ytbold">NotTheTube&nbsp;&nbsp;</h1>
+            <hr>
+            &nbsp;&nbsp;&nbsp;
+            <select id="account">
+                <option id="base" value="base">[Loading account details...]</option>
+                <option id="second" value="second" onchange="executeSecond()">Loading...</option>
+                <option id="third" value="third" onchange="executeThird()">Loading...</option>
+            </select>
+        </div>
+        <div>
+            <video src="https://raw.githubusercontent.com/NTTUploader/1/main/1.mp4" id="video" controls></video>
+            <h1 class="ytbold" id="title1">bon</h1>
+            <br>
+            <h2 class="ytmed" id="details1"><a href="/profile/1.html">kirk7715</a> -&nbsp;</h2>
+            <br>
+            <button onclick="likeVideo()" id="like">Loading...</button>
+            <button onclick="dislikeVideo()" id="dislike" style="display: none">Loading...</button>
+        </div>
+    </body>
+    <script src="handler.js"></script>
+</html>

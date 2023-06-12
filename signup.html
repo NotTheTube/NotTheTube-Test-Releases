@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Signup - NotTheTube</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src='https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js'></script>
+        <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+        <link rel="shortcut icon" href="shortcut icon.png">
+    </head>
+    <body id="body">
+        <!--This is the bar at the top, should be present at all times-->
+        <br>
+        <div id="topbar">
+            <image id="logo" src="icon.png"></image>
+            <br>
+            <h1 class="ytbold">NotTheTube&nbsp;</h1>
+        </div>
+        <!--I have no fucking clue why this works, it just does.-->
+        <center>
+            <h1 class="ytmed" id="header">Welcome to NotTheTube!</h1>
+            <h4>Already have an account? <a href="login.html">Login now.</a></h4>
+            <hr>
+            <h2 class="ytlight">Username</h2>
+            <input placeholder="Type here" id="username" oninput="checkifAllow()">
+            <h2 class="ytlight">Email Address (Optional) <image alt="Blue Question Mark" title="Adding an email address to your account will make your recovery process easier." id="emailquestion" src="image-removebg-preview (4).png"></image></h2>
+            <input placeholder="Type here" id="email" oninput="checkifAllow()">
+            <h2 class="ytlight">Password</h2>
+            <input placeholder="Type here" id="password" type="password" oninput="checkifAllow()"> 
+            <br><br><br><br><br><br>
+            <button onclick="makeAccount()" id="button" disabled>Sign Up</button>
+        </center>
+    </body>
+</html>
+<script src="signup.js"></script>

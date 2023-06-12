@@ -1,0 +1,100 @@
+/** This is for fonts, make sure everything is copied and working **/
+@font-face
+{
+    font-family: ytbold; 
+    src: url("Fonts/youtube-sans-bold.ttf");
+}
+@font-face
+{
+    font-family: ytmedium; 
+    src: url("Fonts/youtube-sans-medium.ttf");
+}
+@font-face
+{
+    font-family: ytmed; 
+    src: url("Fonts/youtube-sans-medium.ttf");
+}
+@font-face
+{
+    font-family: ytlight; 
+    src: url("Fonts/youtube-sans-light.ttf");
+}
+@font-face
+{
+    font-family: deftext; 
+    src: url("/Fonts/Lato-Regular.ttf");
+}
+@font-face
+{
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://fonts.gstatic.com/s/roboto/v29/KFOkCnqEu92Fr1Mu51xFIzIFKw.woff2) format('woff2');
+	unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+.ytbold
+{
+    font-family: ytbold;
+}
+.ytmed
+{
+    font-family: ytmed;
+}
+.ytmedium
+{
+    font-family: ytmedium;
+}
+.ytlight
+{
+    font-family: ytlight;
+}
+.deftext
+{
+    font-family: deftext;
+}
+.defaulttext
+{
+    font-family: deftext;
+}
+#logo
+{
+	width: 55px;
+	margin-top: -5.5px;
+}
+
+
+
+body
+{
+	line-height: 0.1;
+}
+#topbar
+{
+	position: absolute;
+	border: 3px black solid;
+	margin: 0;
+	display: inline-flex;
+    cursor: pointer;
+}
+center
+{
+	margin-top: 80px
+}
+#emailquestion
+{
+    cursor: default;
+    width: 18px;
+    height: 18px;
+}
+.videothumb
+{
+    margin-top: 70px;
+    border-radius: 5px;
+    width: 256px;
+    height: 144px;
+    cursor: pointer;
+}
+#video
+{
+    margin-top: 70px;
+}
