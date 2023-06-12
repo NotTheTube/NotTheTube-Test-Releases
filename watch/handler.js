@@ -175,7 +175,7 @@ function videoDetails()
                 }
             })
             console.log(snapshot.val().views)
-            document.getElementById("details1").innerText = "kirk7715 - " + snapshot.val().views + view + " - " + `${timeSinceUpload}`
+            document.getElementById("details1").innerText = "Seb - " + snapshot.val().views + view + " - " + `${timeSinceUpload}`
         })
         firebase.database().ref("watch/2").on("value", function(snapshot)
         {
