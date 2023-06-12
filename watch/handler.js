@@ -28,7 +28,7 @@ function videoSize()
 }
 
 // When the website is loaded for more 5 seconds, it will add 1 view to the database.
-if(window.location.pathname == 'NotTheTube-Test-Releases/watch/1.html')
+if(window.location.pathname == '/NotTheTube-Test-Releases/watch/1.html')
 {
     setTimeout(() => {
         firebase.database().ref("watch/1").update({
@@ -36,9 +36,16 @@ if(window.location.pathname == 'NotTheTube-Test-Releases/watch/1.html')
         })
     }, 5000)
 }
+else if(window.location.pathname == '/NotTheTube-Test-Releases/watch/2.html')
+{
+    setTimeout(() => {
+        firebase.database().ref("watch/2").update({
+            views: firebase.database.ServerValue.increment(1)
+        })
+    }, 5000)
+}
 
 // This handles account details on the "account" ID
-console.log("GITHUB FIX YOUR FUCKING HOSTING (2 ATTEMPTS)")
 accountDetails()
 function accountDetails()
 {
