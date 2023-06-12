@@ -38,6 +38,7 @@ if(window.location.pathname == 'NotTheTube-Test-Releases/watch/1.html')
 }
 
 // This handles account details on the "account" ID
+console.log("GITHUB FIX YOUR FUCKING HOSTING")
 accountDetails()
 function accountDetails()
 {
