@@ -221,4 +221,20 @@ function likeVideo()
             })
         }
     }
+    else if(window.location.pathname == '/NotTheTube-Test-Releases/watch/2.html')
+    {
+        if(logindataconfirm1 == true && logindataconfirm2 == true && logindataconfirm3 == true)
+        {
+            firebase.database().ref("users/" + userid).update({
+                likedvideoID2: true
+            })
+            firebase.database().ref("watch/2").update({
+                likes: firebase.database.ServerValue.increment(1)
+            })
+            firebase.database().ref("watch/2").on("value", function(snapshot)
+            {
+                document.getElementById("like").innerText = "Likes (" + snapshot.val().likes + ")"
+            })
+        }
+    }
 }
