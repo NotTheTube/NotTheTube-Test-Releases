@@ -238,3 +238,9 @@ function likeVideo()
         }
     }
 }
+
+// This will return the user to the home page.
+function returnHome()
+{
+    window.location.href = '/NotTheTube-Test-Releases/home.html'
+}
