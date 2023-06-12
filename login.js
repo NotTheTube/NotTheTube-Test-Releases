@@ -25,7 +25,12 @@ function checkLogin()
         {
             if(snapshot.val().password == document.getElementById("password").value)
             {
+                localStorage.setItem("username", user)
+                localStorage.setItem("password", pass)
+                localStorage.setItem("accountstatus", "active")
+                localStorage.setItem("userid", userid)
                 console.log("login successful")
+                window.location.href = "home.html"
             }
             else
             {
