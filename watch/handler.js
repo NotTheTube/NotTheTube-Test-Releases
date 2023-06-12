@@ -97,8 +97,12 @@ firebase.database().ref("users/" + userid).on("value", function(snapshot)
 videoDetails()
 function videoDetails()
 {
+    console.log(window.location.pathname == '/NotTheTube-Test-Releases/watch/1.html')
+    console.log(window.location.pathname == '/NotTheTube-Test-Releases/watch/2.html')
+    console.log("if none of these are true then you fucked up big time")
     if(window.location.pathname == '/NotTheTube-Test-Releases/watch/1.html')
     {
+        console.log("loaded")
         const currentTime = new Date();
         const uploadTime = new Date('2023-06-12T03:06:56Z');
         const timeDiff = currentTime - uploadTime;
@@ -193,7 +197,7 @@ function videoDetails()
 // This will like the current video and update the user's liked videos so they cannot keep liking the same video twice.
 function likeVideo()
 {
-    if(window.location.pathname == 'NotTheTube-Test-Releases/watch/1.html')
+    if(window.location.pathname == '/NotTheTube-Test-Releases/watch/1.html')
     {
         if(logindataconfirm1 == true && logindataconfirm2 == true && logindataconfirm3 == true)
         {
