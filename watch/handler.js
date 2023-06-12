@@ -97,7 +97,7 @@ firebase.database().ref("users/" + userid).on("value", function(snapshot)
 videoDetails()
 function videoDetails()
 {
-    if(window.location.pathname == 'NotTheTube-Test-Releases/watch/1.html')
+    if(window.location.pathname == '/NotTheTube-Test-Releases/watch/1.html')
     {
         const currentTime = new Date();
         const uploadTime = new Date('2023-06-12T03:06:56Z');
@@ -140,7 +140,7 @@ function videoDetails()
             document.getElementById("dislike").innerText = "Dislikes (" + snapshot.val().dislikes + ")"
         })
     }
-    else if(window.location.pathname == '/watch/2.html')
+    else if(window.location.pathname == '/NotTheTube-Test-Releases/watch/2.html')
     {
         const currentTime = new Date();
         const uploadTime = new Date('2023-06-12T18:45:56Z');
