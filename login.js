@@ -25,13 +25,10 @@ function checkLogin()
         {
             if(snapshot.val().password == document.getElementById("password").value)
             {
-                var user = document.getElementById("username").value
-                var pass = document.getElementById("password").value
-                var userid = document.getElementById("accID").value
-                localStorage.setItem("username", user)
-                localStorage.setItem("password", pass)
+                localStorage.setItem("username", document.getElementById("username").value)
+                localStorage.setItem("password", document.getElementById("password").value)
                 localStorage.setItem("accountstatus", "active")
-                localStorage.setItem("userid", userid)
+                localStorage.setItem("userid", document.getElementById("accID").value)
                 console.log("login successful")
                 window.location.href = "home.html"
             }
